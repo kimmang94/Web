@@ -14,16 +14,26 @@
      -->
 
      <div class="alert-box" id="alert">
-        알림창
-        <button onclick="alertState('none')">닫기</button>
+        <p id="alert-text">알림창</p>
+        <button id="close">닫기</button>
      </div>
 
-     <button onclick="alertState('block')">버튼</button>
+     <button onclick="idState('block')">버튼</button>
+     <button onclick="passState('block')">버튼</button>
 
      <script>
-        function alertState(sign){
+        function idState(sign){
             document.getElementById('alert').style.display = sign;
+            document.getElementById('alert-text').innerHTML = '아이디를 입력하세요';
         }
+        function passState(sign){
+            document.getElementById('alert').style.display = sign;
+            document.getElementById('alert-text').innerHTML = '비밀번호를 입력하세요';
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        });
      </script>
 </body>
 </html>
