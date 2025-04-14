@@ -1,10 +1,35 @@
-.profile {
-    width : 100px;
-    display : block;
-    margin-left: auto;
-    margin-right:auto;
+.container
+{
+    width: 800px;
 }
 
-.textProfile {
-    text-align: center;
+.header
+{
+    width: 100%;
+    height: 100px;
+    background: aquamarine;
+}
+
+.left-menu
+{
+    width: 20%;
+    height: 400px;
+    background-color: cornflowerblue;
+    float:left;
+}
+
+.right
+{
+    width: 80%;
+    height: 400px;
+    background-color: coral;
+    float:right;
+}
+
+.footer 
+{
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    clear: both;
 }
