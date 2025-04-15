@@ -21,14 +21,14 @@
           </button>
         </div>
       </nav> 
-
+<!-- 
       <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
-      </ul> 
+      </ul>  -->
 
 
       <button id="open">열기</button>
@@ -36,11 +36,34 @@
       <div class="black-bg">
         <div class="white-bg">
           <h4>로그인하세요</h4>
-          <button class="btn btn-danger" id="close">닫기</button>
+          <form action="success.html">
+            <div class="my-3">
+              <input type="text" class="form-control" id="email">
+             </div>
+             <div class="my-3">
+               <input type="password" class="form-control" id="pass">
+             </div>
+             <button type="submit" id = "send"class="btn btn-primary">전송</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+          </form> 
         </div>
       </div> 
 
       <script>
+
+        // 1. 전송 버튼을 누르면 input 에 값이 있는지 확인
+        $('form').on('submit', function(e){
+          if (document.getElementById('email').value == ''){
+            e.preventDefault(); // 폼 전송 막기
+            alert('아이디를 입력해 주세요');  
+          } else if (document.getElementById('pass').value == '')
+          {
+            e.preventDefault();
+            alert('비밀번호를 입력해 주세요');
+          }
+        })
+
+
         // $('#open').on('click',function() {
         //     document.querySelector('.black-bg').classList.add('show');
         // })
@@ -51,7 +74,9 @@
         $('#close').on('click',function() {
             $('.black-bg').removeClass('show-modal');
         })
-
+        $('#close').on('click',function() {
+            $('.black-bg').css('display','none');
+        })
         
 
         document.querySelector('.navbar-toggler').addEventListener('click', function() {
