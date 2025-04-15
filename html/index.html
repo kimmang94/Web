@@ -41,14 +41,18 @@
       </div> 
 
       <script>
+        // $('#open').on('click',function() {
+        //     document.querySelector('.black-bg').classList.add('show');
+        // })
         $('#open').on('click',function() {
-            $('.black-bg').css('display','block');
+            $('.black-bg').addClass('show');
         })
 
         $('#close').on('click',function() {
-            $('.black-bg').css('display','none');
+            $('.black-bg').removeClass('show');
         })
 
+        
 
         document.querySelector('.navbar-toggler').addEventListener('click', function() {
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
