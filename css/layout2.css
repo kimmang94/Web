@@ -1,47 +1,41 @@
-*
-{
-    margin: 0;
-    padding: 0;
+.cart-background{
+    width:100%;
+    background-color: #c2d3de;
+    padding: 30px;
 }
 
-.main-background
-{
+.cart-table{
     width: 100%;
-    height: 500px;
-    background-image: url(/img/shoes.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 1px;
+    max-width: 700px;
+
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+td, th {
+    /*border: 1px solid black;*/
+}
+
+.cart-table td, .cart-table th {
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
     
 }
 
-.main-title
-{
-    color:white;
-    font-size: 40px;
-    margin-top: 30px;
-    text-align: center;
+.item-img{
+    width: 100px;
+
 }
 
-.main-content
-{
-    margin-top: 50px;
-    color: white;
-    text-align: center;
+.cell-long {
+    width: 700px;
 }
 
-.buyBtn
-{
-    padding: 15px;
-    font-size: 20px;
-    background-color: white;
-    border-radius: 10px;
+.cart-table th:nth-child(2) {
+    width: 400px;
+}
 
-    position : absolute; 
-    left : 0;
-    right : 0; 
-    margin-top: 100px;
-    margin-left : 40%;
-    margin-right : 40%;
+.total-price{
+    text-align: right;
 }

@@ -60,6 +60,10 @@
           {
             e.preventDefault();
             alert('비밀번호를 입력해 주세요');
+          } else if (document.getElementById('pass').value.length < 6)
+          {
+            e.preventDefault();
+            alert('7자리 이상으로 해주세요');
           }
         })
 
