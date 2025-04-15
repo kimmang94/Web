@@ -15,7 +15,8 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <span class="navbar-brand">Navbar</span>
+          <span class="navbar-brand">JSShop</span>
+          <span class="badge bg-dark">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -50,6 +51,18 @@
       </div> 
 
       <script>
+        var clickCount = 0;
+        $('.badge').on('click', function() {
+          clickCount+= 1;
+          if (clickCount % 2 == 1){
+             $('.badge').html('Light 🔄')
+          }else{
+            $('.badge').html('Dark 🔄')
+          }
+        })
+        // 1. 홀수번 클릭시 badge 클릭시 내부 글자를 Light 로 변경
+   
+        // 2. 짝수번 클릭시 dark 로 변경
 
         // 1. 전송 버튼을 누르면 input 에 값이 있는지 확인
         $('form').on('submit', function(e){
