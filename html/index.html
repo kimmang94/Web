@@ -50,7 +50,18 @@
         </div>
       </div> 
 
+      <div class="alert alert-danger">
+        5초 이내 구매시 사은품 증정
+      </div>
       <script>
+        // 1초 뒤에 실행
+          setTimeout(function(){ 
+            $('.alert').hide() }, 1000);
+
+            // 1초 마다 실행행
+           setInterval(function(){ 
+            $('.alert').hide() }, 1000);
+
         var clickCount = 0;
         $('.badge').on('click', function() {
           clickCount+= 1;
