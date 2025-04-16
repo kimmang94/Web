@@ -22,15 +22,6 @@
           </button>
         </div>
       </nav> 
-<!-- 
-      <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>  -->
-
 
       <button id="open">열기</button>
 
@@ -53,14 +44,62 @@
       <div class="alert alert-danger">
         5초 이내 구매시 사은품 증정
       </div>
+
+      <!--캐러셀 만들기-->
+      <div style="overflow: hidden;">
+        <div class="slide-container">
+          <div class="slide-box">
+            <img src="/img/car1.png">
+          </div>
+          <div class="slide-box">
+            <img src="/img/car2.png">
+          </div>
+          <div class="slide-box">
+            <img src="/img/car3.png">
+          </div>
+        </div>
+      </div>
+
+      <button class="slide-1">1</button>
+      <button class="slide-2">2</button>
+      <button class="slide-3">3</button>
+
+
       <script>
+         $('.slide-1').on('click', function() {
+          $('.slide-container').css('transform', 'translateX(0vw)');
+        })
+        $('.slide-2').on('click', function() {
+          $('.slide-container').css('transform', 'translateX(-100vw)');
+        })
+        $('.slide-3').on('click', function() {
+          $('.slide-container').css('transform', 'translateX(-200vw)');
+        })
+
+        var input = document.getElementById('email').value;
+
+        $('form').on('submit', function(){
+          if (document.getElementById('email').value == ''){
+            alert('아이디 미입력');
+            e.preventDefault();
+          }
+          if (/\S+@\S+\.\S+/.test(input)){
+            alert('이메일 형식이 아닙니다.');
+            e.preventDefault();
+          }
+        })
+
         // 1초 뒤에 실행
           setTimeout(function(){ 
             $('.alert').hide() }, 1000);
 
             // 1초 마다 실행행
-           setInterval(function(){ 
-            $('.alert').hide() }, 1000);
+           setInterval(countdown(), 1000);
+
+            var count = 5;
+            function countdown() {
+              count -= 1;
+            }
 
         var clickCount = 0;
         $('.badge').on('click', function() {
