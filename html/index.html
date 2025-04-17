@@ -22,6 +22,10 @@
           </button>
         </div>
       </nav> 
+      <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+      </div> 
+    <div style="height:10000px"></div>
 
       <button id="open">열기</button>
 
@@ -66,9 +70,16 @@
       <button class="next">다음</button>
       <button class="prev">이전</button>
 
-      
+
 
       <script>
+        window.addEventListener('scroll',function() {
+          if(window.scrollY >= 100){ 
+
+          }
+        });
+
+
         var currentImg = 1;
 
         $('.prev').on('click', function() {
