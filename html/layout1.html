@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/css/main.css" rel="stylesheet">
+    <title>레이아웃 1</title>
+    <link href="/css/layout1.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="#">영화</a></li>
-            <li><a href="#">맛집</a></li>
-            <li><a href="#">웹</a></li>
-            <li><a href="#">컴퓨터</a></li>
+     <!-- 탭기능-->
+     <div class="container mt-5">
+        <ul class="list">
+          <li class="tab-button">Products</li>
+          <li class="tab-button">Information</li>
+          <li class="tab-button">Shipping</li>
         </ul>
-    </nav>
+        <div class="tab-content">
+          <p>상품설명입니다. Product</p>
+        </div>
+        <div class="tab-content">
+          <p>스펙설명입니다. Information</p>
+        </div>
+        <div class="tab-content">
+          <p>배송정보입니다. Shipping</p>
+        </div>
+      </div> 
+    <!-- 탭기능-->
 
-    <div class="container">
-        <div class="blog-content">
-            <div class="user-info">
-                    <img src="lion.png" class="user-img">
-                <div class="user-name">
-                    <h4>이름</h4>
-                    <p>날짜</p>
-                </div>
-            </div>
-            <div class="content">
-                <h4>블로그글</h4>
-                <P>내용</P>
-            </div>
-        </div>
-        <div class="blog-img">
-            <img>
-        </div>
-    </div>
+    <script>
+        var tabBtn = document.querySelectorAll('.tab-button');
+        var tabContent = document.querySelectorAll('.tab-content');
+      
+        for (let i = 0; i < tabBtn.length; i++) {
+          tabBtn[i].addEventListener('click', function () {
+            // 모든 탭 버튼의 orange 제거
+            tabBtn.forEach(btn => btn.classList.remove('orange'));
+            // 클릭된 버튼만 orange 추가
+            tabBtn[i].classList.add('orange');
+      
+            // 모든 콘텐츠의 show 제거
+            tabContent.forEach(content => content.classList.remove('show'));
+            // 클릭된 인덱스의 콘텐츠에만 show 추가
+            tabContent[i].classList.add('show');
+          });
+        }
+      </script>
+      
 </body>
 </html>
