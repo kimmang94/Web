@@ -5,51 +5,44 @@
   <meta http-equiv="X-UA-Compatible"content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Naver</title>
-  <style>
-    html, body{
-      margin: 0;
-      padding: 0;
-    }
-
-    #wrap{
-      text-align: center;
-     }
-
-    #header{
-       text-align: left;
-    }
-
-    #wrap-center{
-      width: 1280px;
-       background-color: yellow;
-      display: inline-block;
-    }
-
-    #main {
-      height: 2000px;
-    }
-
-    #header-hamburger{
-      margin-top: 18px;
-      display: inline-block;
-      padding:10px
-    }
 
 
   </style>
 </head>
 <body>
-  <div id="wrap">
-    <div id="wrap-center">
-      <div id="header">
-        <div id="header-hamburger">
-          <div> <img src="/img/Group.png" style="width: 50px;"></div>
-        </div>
+  <div class="card-group container">
+    <div class="card">
+      <img src="https://placehold.co/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : 70000</p>
+        <button class="btn btn-danger">주문하기</button>
       </div>
-      <div id="search"></div>
-      <div id="nav"></div>
-      <div id="main"></div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.co/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : 70000</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://placehold.co/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : 70000</p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
     </div>
   </div>
+  
+  <script>
+    var products = [
+      { id : 0, price : 70000, title : 'Blossom Dress' },
+      { id : 1, price : 50000, title : 'Springfield Shirt' },
+      { id : 2, price : 60000, title : 'Black Monastery' }
+    ];
+  </script> 
 </body>
 </html>
