@@ -44,5 +44,21 @@
       { id : 2, price : 60000, title : 'Black Monastery' }
     ];
   </script> 
+  <script>
+    var pants = [28, 30, 32];
+    $('.form-select').eq(0).on('input', function(){
+  
+      var value = $('.form-select').eq(0).val();
+      if (value == '셔츠') {
+        $('.form-select').eq(1).removeClass('form-hide');
+      }
+      else if (value == '바지'){
+        $('.form-select').eq(1).removeClass('form-hide');
+        $('.form-select').eq(1).html('');
+        여기다 무슨 코드 짜야함 
+      }
+  
+    });
+  </script>
 </body>
 </html>
